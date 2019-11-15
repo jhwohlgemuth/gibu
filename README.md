@@ -5,6 +5,7 @@ gibu
 [![npm](https://img.shields.io/npm/v/gibu?style=for-the-badge)](https://www.npmjs.com/package/gibu)
 [![Travis (.org)](https://img.shields.io/travis/jhwohlgemuth/gibu?style=for-the-badge)](https://travis-ci.org/jhwohlgemuth/gibu)
 [![Codecov](https://img.shields.io/codecov/c/github/jhwohlgemuth/gibu?style=for-the-badge)](https://codecov.io/gh/jhwohlgemuth/gibu)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjhwohlgemuth%2Fgibu.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjhwohlgemuth%2Fgibu?ref=badge_shield)
 
 Installation
 ------------
@@ -36,3 +37,6 @@ Why "gibu"?
 > "gibu" (ギブ) means "give" in Japanese, also it is a short word that is easy to type ;)
 
 I made this tool while preparing for the [OSCP exam](https://www.offensive-security.com/pwk-oscp/). It saved me some time and effort, so I decided to share it.
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjhwohlgemuth%2Fgibu.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjhwohlgemuth%2Fgibu?ref=badge_large)
