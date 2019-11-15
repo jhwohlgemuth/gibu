@@ -2,9 +2,9 @@ gibu
 ====
 > A command line utility that will "gibu" you the file or file name you want.
 
-![npm](https://img.shields.io/npm/v/gibu?style=for-the-badge) 
-![Travis (.org)](https://img.shields.io/travis/jhwohlgemuth/gibu?style=for-the-badge) 
-![Codecov](https://img.shields.io/codecov/c/github/jhwohlgemuth/gibu?style=for-the-badge)
+[![npm](https://img.shields.io/npm/v/gibu?style=for-the-badge)](https://www.npmjs.com/package/gibu)
+[![Travis (.org)](https://img.shields.io/travis/jhwohlgemuth/gibu?style=for-the-badge)](https://travis-ci.org/jhwohlgemuth/gibu)
+[![Codecov](https://img.shields.io/codecov/c/github/jhwohlgemuth/gibu?style=for-the-badge)](https://codecov.io/gh/jhwohlgemuth/gibu)
 
 Installation
 ------------
