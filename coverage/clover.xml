@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1573782297386" clover="3.2.0">
-  <project timestamp="1573782297386" name="All files">
+<coverage generated="1573783274960" clover="3.2.0">
+  <project timestamp="1573783274960" name="All files">
     <metrics statements="86" coveredstatements="19" conditionals="69" coveredconditionals="14" methods="18" coveredmethods="3" elements="173" coveredelements="36" complexity="0" loc="86" ncloc="86" packages="1" files="1" classes="1"/>
     <file name="ui.js" path="/Users/jason/dev/gibu/src/ui.js">
       <metrics statements="86" coveredstatements="19" conditionals="69" coveredconditionals="14" methods="18" coveredmethods="3"/>
