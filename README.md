@@ -5,7 +5,6 @@ gibu
 [![npm](https://img.shields.io/npm/v/gibu?style=for-the-badge)](https://www.npmjs.com/package/gibu)
 [![Travis (.org)](https://img.shields.io/travis/jhwohlgemuth/gibu?style=for-the-badge)](https://travis-ci.org/jhwohlgemuth/gibu)
 [![Codecov](https://img.shields.io/codecov/c/github/jhwohlgemuth/gibu?style=for-the-badge)](https://codecov.io/gh/jhwohlgemuth/gibu)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjhwohlgemuth%2Fgibu.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjhwohlgemuth%2Fgibu?ref=badge_shield)
 
 Installation
 ------------
