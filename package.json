@@ -14,7 +14,11 @@
         "lint:ing": "watch 'npm run lint' ./src",
         "lint:tests": "eslint __tests__/**/*.js -c ./.eslintrc.js --fix --no-ignore",
         "test": "jest .*.test.js --coverage",
-        "test:ing": "npm test -- --watchAll"
+        "test:ing": "npm test -- --watchAll",
+        "preversion": "npm-run-all lint build:es test",
+        "postversion": "git push && git push --tags",
+        "prerelease": "npm run preversion",
+        "release": "release"
     },
     "devDependencies": {
         "@babel/cli": "^7.6.0",
@@ -36,6 +40,8 @@
         "ink-testing-library": "^1.0.2",
         "jest": "^24.9.0",
         "jest-watch-typeahead": "^0.4.0",
+        "npm-run-all": "^4.1.5",
+        "release": "^6.1.0",
         "watch": "^1.0.2"
     },
     "jest": {
