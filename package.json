@@ -14,7 +14,11 @@
         "lint:ing": "watch 'npm run lint' ./src",
         "lint:tests": "eslint __tests__/**/*.js -c ./.eslintrc.js --fix --no-ignore",
         "test": "jest .*.test.js --coverage",
-        "test:ing": "npm test -- --watchAll"
+        "test:ing": "npm test -- --watchAll",
+        "preversion": "npm-run-all lint build:es test",
+        "postversion": "git push && git push --tags",
+        "prerelease": "npm run preversion",
+        "release": "release"
     },
     "devDependencies": {
         "@babel/cli": "^7.6.0",
