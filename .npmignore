@@ -1,0 +1,15 @@
+/.github
+/.vscode
+/docs
+/resources
+/node_modules
+/src
+/__tests__
+/coverage
+.travis.yml
+.editorconfig
+.eslintrc.js
+.eslintignore
+babel.config.js
+esdoc.conf.json
+renovate.json

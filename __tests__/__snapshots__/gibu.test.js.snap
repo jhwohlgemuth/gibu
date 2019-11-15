@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CompleteMessage component can render message for content copies 1`] = `
+"  ↳ Copied[36m[1m some.file.name content [22m[39mto clipboard!
+"
+`;
+
+exports[`CompleteMessage component can render message for file name copies (default) 1`] = `
+"  ↳ Copied[36m[1m “some.file.name” [22m[39mto clipboard!
+"
+`;
+
+exports[`CompleteMessage component can render message for file saves 1`] = `
+"  ↳ Saved[36m[1m some.file.name[22m[39m to path/to/[36m[1mfoo.txt[22m[39m
+"
+`;
+
+exports[`HighlightedText component can render highlighted text (empty query) 1`] = `"[1m[2mbarbaz[1m[22m"`;
+
+exports[`HighlightedText component can render highlighted text (middle of string) 1`] = `"[2mfoo[22m[36m[1mbar[22m[39m[2mbaz[22m"`;
+
+exports[`HighlightedText component can render highlighted text (no match) 1`] = `""`;
+
+exports[`HighlightedText component can render highlighted text (selected) 1`] = `"[36m[1mfoo[22m[39m[1m[2mbar[1m[22m"`;
+
+exports[`HighlightedText component can render highlighted text (start of string) 1`] = `"[36m[1mfoo[22m[39m[2mbar[22m"`;
+
+exports[`SearchInput component can render input 1`] = `
+"
+[2m/path/to/some/directory/[22m[36m[1mfoobar[7m [27m[22m[39m
+"
+`;
