@@ -22,11 +22,10 @@ const help = `
 
     ${dim.bold('Options')}
 
-        --absolute          -a  Copy absolute path for file [Default: false]
         --content           -c  Copy file content instead of file name [Default: false]
         --debug             -d  Show debug data [Default: false]
         --filename-only     -f  Copy only filename, not the entire path [Default: false]
-        --help              -h  Shoq this help message
+        --help              -h  Show this help message
         --ignore-warnings,  -i  Ignore warning messages [Default: false]
         --limit             -l  Set maximum number of items to be shown at once [Default: 30]
         --output            -o  Choose output file to save clipboard content to [Default: '']
@@ -36,24 +35,21 @@ const help = `
     ${dim.bold('Options')}
 
         ${dim('Copy the NSE script name for use with "nmap $IP --script <paste here>"')}
-        ${cyan('>')} gibu /usr/share/nmap/scripts --remove-extension
+        ${cyan('>')} gibu /usr/share/nmap/scripts --filename-only --remove-extension
+        ${cyan('>')} gibu /usr/share/nmap/scripts -fr
 
         ${dim('Copy path to wordlist for use with hydra, medusa, gobuster, etc...')}
-        ${cyan('>')} gibu /usr/share/wordlist --absolute
+        ${cyan('>')} gibu /usr/share/wordlist
 
         ${dim('Copy exploit content to clipboard')}
         ${cyan('>')} gibu /usr/share/exploitdb/exploits --content
+        ${cyan('>')} gibu /usr/share/exploitdb/exploits -c
 
 
 `;
 const options = {
     help,
     flags: {
-        absolute: {
-            type: 'boolean',
-            default: false,
-            alias: 'a'
-        },
         content: {
             type: 'boolean',
             default: false,

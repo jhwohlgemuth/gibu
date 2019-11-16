@@ -8,11 +8,10 @@ console.log(b),process.exit()},help=`
 
     ${_chalk.dim.bold("Options")}
 
-        --absolute          -a  Copy absolute path for file [Default: false]
         --content           -c  Copy file content instead of file name [Default: false]
         --debug             -d  Show debug data [Default: false]
         --filename-only     -f  Copy only filename, not the entire path [Default: false]
-        --help              -h  Shoq this help message
+        --help              -h  Show this help message
         --ignore-warnings,  -i  Ignore warning messages [Default: false]
         --limit             -l  Set maximum number of items to be shown at once [Default: 30]
         --output            -o  Choose output file to save clipboard content to [Default: '']
@@ -22,15 +21,17 @@ console.log(b),process.exit()},help=`
     ${_chalk.dim.bold("Options")}
 
         ${(0,_chalk.dim)("Copy the NSE script name for use with \"nmap $IP --script <paste here>\"")}
-        ${(0,_chalk.cyan)(">")} gibu /usr/share/nmap/scripts --remove-extension
+        ${(0,_chalk.cyan)(">")} gibu /usr/share/nmap/scripts --filename-only --remove-extension
+        ${(0,_chalk.cyan)(">")} gibu /usr/share/nmap/scripts -fr
 
         ${(0,_chalk.dim)("Copy path to wordlist for use with hydra, medusa, gobuster, etc...")}
-        ${(0,_chalk.cyan)(">")} gibu /usr/share/wordlist --absolute
+        ${(0,_chalk.cyan)(">")} gibu /usr/share/wordlist
 
         ${(0,_chalk.dim)("Copy exploit content to clipboard")}
         ${(0,_chalk.cyan)(">")} gibu /usr/share/exploitdb/exploits --content
+        ${(0,_chalk.cyan)(">")} gibu /usr/share/exploitdb/exploits -c
 
 
-`,options={help,flags:{absolute:{type:"boolean",default:!1,alias:"a"},content:{type:"boolean",default:!1,alias:"c"},debug:{type:"boolean",default:!1,alias:"d"},filenameOnly:{type:"boolean",default:!1,alias:"f"},help:{type:"boolean",default:!1,alias:"h"},ignoreWarnings:{type:"boolean",default:!1,alias:"i"},limit:{type:"number",default:40,alias:"l"},output:{type:"string",default:"",alias:"o"},removeExtension:{type:"boolean",default:!1,alias:"r"},version:{type:"boolean",default:!1,alias:"v"}}};(0,_asyncToGenerator2.default)(function*(){const a=yield(0,_getStdin.default)(),{input:b,flags:c}=(0,_meow.default)(options);// const foo = await getFileContent('.editorconfig', 'utf8');
+`,options={help,flags:{content:{type:"boolean",default:!1,alias:"c"},debug:{type:"boolean",default:!1,alias:"d"},filenameOnly:{type:"boolean",default:!1,alias:"f"},help:{type:"boolean",default:!1,alias:"h"},ignoreWarnings:{type:"boolean",default:!1,alias:"i"},limit:{type:"number",default:40,alias:"l"},output:{type:"string",default:"",alias:"o"},removeExtension:{type:"boolean",default:!1,alias:"r"},version:{type:"boolean",default:!1,alias:"v"}}};(0,_asyncToGenerator2.default)(function*(){const a=yield(0,_getStdin.default)(),{input:b,flags:c}=(0,_meow.default)(options);// const foo = await getFileContent('.editorconfig', 'utf8');
 // console.log(foo);
 ("version"===b[0]||c.version)&&showVersion(),(0,_ink.render)(_react.default.createElement(_ui.default,{flags:c,input:b,stdin:a}),{exitOnCtrlC:!0})})();var _default={};exports.default=_default;

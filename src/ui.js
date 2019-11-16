@@ -14,6 +14,17 @@ const writeContent = promisify(writeFile);
 const getStat = promisify(stat);
 const {min, max} = Math;
 
+const createFormatter = (base, current, options) => {
+    const {
+        removeExtension,
+        filenameOnly,
+    } = options;
+    return value => [].concat(
+        removeExtension ? it => parse(it).name : [],
+        filenameOnly ? [] : it => join(resolve(base, current), it)
+    ).reduce((result, fn) => fn(result), value);
+};
+
 export const HighlightedText = ({children, bold, re}) => {
     const [match] = children.match(re) || [];
     const start = match ? children.indexOf(match) : 0;
@@ -49,15 +60,14 @@ export const CompleteMessage = ({value, copyFileContent = false, outputFileName 
 export const Main = ({flags, input, stdin}) => {
     const [folderPath = process.cwd()] = input;
     const {
-        filenameOnly,
         limit,
         removeExtension,
-        absolute: useAbsolute,
         content: copyFileContent,
         output: outputFileName
     } = flags;
     const {exit} = useContext(AppContext);
-    const [currentDirectory, setCurrentDirectory] = useState(folderPath);
+    const basePath = resolve(folderPath);
+    const [currentDirectory, setCurrentDirectory] = useState(basePath);
     const [query, setQuery] = useState('');
     const [items, setItems] = useState([]);
     const [initialItems, setInitialItems] = useState([]);
@@ -90,7 +100,7 @@ export const Main = ({flags, input, stdin}) => {
     };
     useEffect(() => {
         async function getContent() {
-            const content = await getDirectoryContent(folderPath);
+            const content = await getDirectoryContent(basePath);
             setItems(content);
             setInitialItems(content);
         }
@@ -98,10 +108,7 @@ export const Main = ({flags, input, stdin}) => {
     }, []);
     stdin || useInput(async (input, key) => {
         const isTab = (input, key) => input === 'i' && key.ctrl;
-        const format = value => [].concat(
-            removeExtension ? it => parse(it).name : [],
-            filenameOnly ? [] : it => join((useAbsolute ? resolve : relative)(folderPath, currentDirectory), it)
-        ).reduce((result, fn) => fn(result), value);
+        const format = createFormatter(basePath, currentDirectory, flags);
         if (key.return) {
             const input = items[index];
             const nextPath = join(currentDirectory, input);
