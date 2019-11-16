@@ -31,6 +31,10 @@ console.log(b),process.exit()},help=`
         ${(0,_chalk.cyan)(">")} gibu /usr/share/exploitdb/exploits --content
         ${(0,_chalk.cyan)(">")} gibu /usr/share/exploitdb/exploits -c
 
+        ${(0,_chalk.dim)("Some options cannot be used together. ex: --content and --remove-extension")}
+        ${(0,_chalk.red)("The following command will not work:")}
+        ${(0,_chalk.cyan)(">")} gibu /path/to/some/directory -cr
+
 
 `,options={help,flags:{content:{type:"boolean",default:!1,alias:"c"},debug:{type:"boolean",default:!1,alias:"d"},filenameOnly:{type:"boolean",default:!1,alias:"f"},help:{type:"boolean",default:!1,alias:"h"},ignoreWarnings:{type:"boolean",default:!1,alias:"i"},limit:{type:"number",default:40,alias:"l"},output:{type:"string",default:"",alias:"o"},removeExtension:{type:"boolean",default:!1,alias:"r"},version:{type:"boolean",default:!1,alias:"v"}}};(0,_asyncToGenerator2.default)(function*(){const a=yield(0,_getStdin.default)(),{input:b,flags:c}=(0,_meow.default)(options);// const foo = await getFileContent('.editorconfig', 'utf8');
 // console.log(foo);

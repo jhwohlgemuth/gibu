@@ -1,4 +1,4 @@
-import {join, parse, relative, resolve} from 'path';
+import {join, parse, resolve} from 'path';
 import {promisify} from 'util';
 import {readdir, readFile, stat, writeFile} from 'fs-extra';
 import React, {Fragment, useContext, useEffect, useState} from 'react';
@@ -15,10 +15,7 @@ const getStat = promisify(stat);
 const {min, max} = Math;
 
 const createFormatter = (base, current, options) => {
-    const {
-        removeExtension,
-        filenameOnly,
-    } = options;
+    const {removeExtension, filenameOnly} = options;
     return value => [].concat(
         removeExtension ? it => parse(it).name : [],
         filenameOnly ? [] : it => join(resolve(base, current), it)
@@ -121,7 +118,7 @@ export const Main = ({flags, input, stdin}) => {
                 setIndex(0);
             } else {
                 if (copyFileContent && removeExtension) {
-                    setError({message: 'Cannot use --remove-extension/-r AND --content/-c options at the same time!'});
+                    setError({message: '-r and -c options cannot be used at the same time...'});
                 } else {
                     const output = format(input);
                     try {
@@ -148,7 +145,7 @@ export const Main = ({flags, input, stdin}) => {
         }
     });
     return stdin ? <Color dim>handle input from stdin...</Color> : <Fragment>
-        {error && <Box margin={1} flexDirection='row'><Color red>ERROR: </Color><Text>{error.message}</Text></Box>}
+        {error && <Box margin={1} flexDirection='row'><Color red>This is awkward... </Color><Text>{error.message}</Text></Box>}
         {selected ?
             error || <CompleteMessage value={selected} copyFileContent={copyFileContent} outputFileName={outputFileName}/> :
             <Box flexDirection={'column'}>

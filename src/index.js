@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import {join} from 'path';
 import React from 'react';
-import {cyan, dim} from 'chalk';
+import {cyan, dim, red} from 'chalk';
 import meow from 'meow';
 import getStdin from 'get-stdin';
 // import reopenTTY from 'reopen-tty';
@@ -44,6 +44,10 @@ const help = `
         ${dim('Copy exploit content to clipboard')}
         ${cyan('>')} gibu /usr/share/exploitdb/exploits --content
         ${cyan('>')} gibu /usr/share/exploitdb/exploits -c
+
+        ${dim('Some options cannot be used together. ex: --content and --remove-extension')}
+        ${red('The following command will not work:')}
+        ${cyan('>')} gibu /path/to/some/directory -cr
 
 
 `;
