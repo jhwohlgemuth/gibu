@@ -25,7 +25,7 @@ console.log(b),process.exit()},help=`
         ${(0,_chalk.cyan)(">")} gibu /usr/share/nmap/scripts -fr
 
         ${(0,_chalk.dim)("Copy path to wordlist for use with hydra, medusa, gobuster, etc...")}
-        ${(0,_chalk.cyan)(">")} gibu /usr/share/wordlist
+        ${(0,_chalk.cyan)(">")} gibu /usr/share/wordlists
 
         ${(0,_chalk.dim)("Copy exploit content to clipboard")}
         ${(0,_chalk.cyan)(">")} gibu /usr/share/exploitdb/exploits --content

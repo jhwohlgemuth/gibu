@@ -39,7 +39,7 @@ const help = `
         ${cyan('>')} gibu /usr/share/nmap/scripts -fr
 
         ${dim('Copy path to wordlist for use with hydra, medusa, gobuster, etc...')}
-        ${cyan('>')} gibu /usr/share/wordlist
+        ${cyan('>')} gibu /usr/share/wordlists
 
         ${dim('Copy exploit content to clipboard')}
         ${cyan('>')} gibu /usr/share/exploitdb/exploits --content
