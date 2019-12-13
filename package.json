@@ -1,6 +1,6 @@
 {
     "name": "gibu",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "description": "A command line utility that will \"gibu\" you the file or file name you want",
     "license": "MIT",
     "keywords": [],
