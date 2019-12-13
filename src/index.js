@@ -32,7 +32,7 @@ const help = `
         --remove-extension  -r  Remove file extension from returned string [Default: false]
         --version,          -v  Print version
 
-    ${dim.bold('Options')}
+    ${dim.bold('Examples')}
 
         ${dim('Copy the NSE script name for use with "nmap $IP --script <paste here>"')}
         ${cyan('>')} gibu /usr/share/nmap/scripts --filename-only --remove-extension

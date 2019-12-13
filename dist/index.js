@@ -18,7 +18,7 @@ console.log(b),process.exit()},help=`
         --remove-extension  -r  Remove file extension from returned string [Default: false]
         --version,          -v  Print version
 
-    ${_chalk.dim.bold("Options")}
+    ${_chalk.dim.bold("Examples")}
 
         ${(0,_chalk.dim)("Copy the NSE script name for use with \"nmap $IP --script <paste here>\"")}
         ${(0,_chalk.cyan)(">")} gibu /usr/share/nmap/scripts --filename-only --remove-extension
