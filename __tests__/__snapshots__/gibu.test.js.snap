@@ -15,13 +15,13 @@ exports[`CompleteMessage component can render message for file saves 1`] = `
 "
 `;
 
-exports[`HighlightedText component can render highlighted text (empty query) 1`] = `"[1m[2mbarbaz[1m[22m"`;
+exports[`HighlightedText component can render highlighted text (empty query) 1`] = `"[1m[2mbarbaz[22m[1m[22m"`;
 
 exports[`HighlightedText component can render highlighted text (middle of string) 1`] = `"[2mfoo[22m[36m[1mbar[22m[39m[2mbaz[22m"`;
 
 exports[`HighlightedText component can render highlighted text (no match) 1`] = `""`;
 
-exports[`HighlightedText component can render highlighted text (selected) 1`] = `"[36m[1mfoo[22m[39m[1m[2mbar[1m[22m"`;
+exports[`HighlightedText component can render highlighted text (selected) 1`] = `"[36m[1mfoo[22m[39m[1m[2mbar[22m[1m[22m"`;
 
 exports[`HighlightedText component can render highlighted text (start of string) 1`] = `"[36m[1mfoo[22m[39m[2mbar[22m"`;
 
