@@ -130,7 +130,7 @@ export const Main = ({flags, input, stdin}) => {
                     }
                     setSelected(output);
                 }
-                exit();
+                process.platform.startsWith('win') ? process.exit() : exit();
             }
         }
         if (isTab(input, key)) {
