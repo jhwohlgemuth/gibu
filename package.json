@@ -55,7 +55,7 @@
         "babel-preset-minify": "0.5.1",
         "eslint": "6.6.0",
         "eslint-config-omaha-prime-grade": "11.0.4",
-        "eslint-plugin-react": "7.16.0",
+        "eslint-plugin-react": "7.22.0",
         "ink-testing-library": "1.0.2",
         "jest": "24.9.0",
         "jest-watch-typeahead": "0.4.2",
