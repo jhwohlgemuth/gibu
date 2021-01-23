@@ -23,7 +23,7 @@
     "dependencies": {
         "clipboardy": "^2.3.0",
         "common-tags": "1.8.0",
-        "core-js": "3.4.1",
+        "core-js": "3.8.3",
         "figures": "3.1.0",
         "fs-extra": "8.1.0",
         "get-stdin": "7.0.0",
